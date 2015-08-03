@@ -1,0 +1,38 @@
+<jxb:bindings version="2.1"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:annox="http://annox.dev.java.net"
+              xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+              xmlns:reference="http://www.imr.no/formats/nmdreference/v1"
+              jxb:extensionBindingPrefixes="xjc annox">
+    <!-- By Kjetil Fjellheim (IMR) -->
+    <jxb:bindings schemaLocation="../resources/response.xsd" node="/xs:schema">
+        <jxb:globalBindings>
+            <jxb:serializable uid="1" />
+        </jxb:globalBindings>
+        <jxb:schemaBindings>
+            <jxb:package name=">no.imr.nmdapi.generic.response.v1" />
+        </jxb:schemaBindings>
+        <jxb:bindings node="//xs:complexType[@name='errorElementType']">
+            <annox:annotate>
+                <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="error" />
+            </annox:annotate>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='listElementType']">
+            <annox:annotate>
+                <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="list" />
+            </annox:annotate>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='resultElementType']">
+            <annox:annotate>
+                <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="result" />
+            </annox:annotate>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='booleanElementType']">
+            <annox:annotate>
+                <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="result" />
+            </annox:annotate>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>

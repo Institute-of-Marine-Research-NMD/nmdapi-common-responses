@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.imr.no/formats/nmdapi/responses/v1" targetNamespace="http://www.imr.no/formats/nmdapi/responses/v1" elementFormDefault="qualified" version="1.0">
+    <!--
+            Root elements
+    -->
+    <xs:element name="error" type="errorElementType" />
+
+    <!--
+            Error element type.
+    -->
+    <xs:complexType name="errorElementType">
+        <xs:sequence>
+            <xs:element name="errorcode" type="xs:integer"/>
+            <xs:element name="message" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="listElementType">
+        <xs:sequence>
+            <xs:element name="element" type="resultElementType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="resultElementType">
+        <xs:sequence>
+            <xs:element name="result" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="booleanElementType">
+        <xs:sequence>
+            <xs:element name="result" type="xs:boolean" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
