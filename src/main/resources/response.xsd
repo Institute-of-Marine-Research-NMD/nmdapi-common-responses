@@ -31,13 +31,13 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="keyValueListType">
+    <xs:complexType name="optionKeyValueListType">
         <xs:sequence>
-            <xs:element name="element" type="keyValueType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="element" type="optionKeyValueType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="keyValueType">
+    <xs:complexType name="optionKeyValueType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="key" type="xs:string" />
