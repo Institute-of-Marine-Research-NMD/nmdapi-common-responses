@@ -30,4 +30,17 @@
             <xs:element name="result" type="xs:boolean" />
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="keyValueListType">
+        <xs:sequence>
+            <xs:element name="element" type="keyValueType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="keyValueType">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="key" type="xs:string" />
+    </xs:complexType>
 </xs:schema>

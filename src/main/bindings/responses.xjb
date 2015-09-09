@@ -34,5 +34,10 @@
                 <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="result" />
             </annox:annotate>
         </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='keyValueListType']">
+            <annox:annotate>
+                <annox:annotate annox:class="javax.xml.bind.annotation.XmlRootElement" name="optionList" />
+            </annox:annotate>
+        </jxb:bindings>
     </jxb:bindings>
 </jxb:bindings>
