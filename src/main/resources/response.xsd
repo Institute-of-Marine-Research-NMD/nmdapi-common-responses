@@ -44,4 +44,20 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
+
+    <xs:complexType name="listElementWithParamsType">
+        <xs:sequence>
+            <xs:element name="element" type="elementWithParamsType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="elementWithParamsType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:anyAttribute/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
 </xs:schema>
